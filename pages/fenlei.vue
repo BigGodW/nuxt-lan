@@ -1,6 +1,8 @@
 <template>
     <div class=" ">
-        <div class="h-40 bg-amber-600 rounded-2xl m-2"></div>
+        <div class="h-40 rounded-2xl m-2 overflow-hidden">
+            <img src="https://img.wubug.cn/%E5%9B%BE%E6%80%AA%E5%85%BD_%E6%98%A5%E8%8A%82%E9%98%B2%E7%96%AB%E5%85%AC%E4%BC%97%E5%8F%B7%E9%A6%96%E5%9B%BE%20%282%29.jpg" class="w-full h-full object-cover" alt="">
+        </div>
         <!-- 兰花分类 顶部固定12 -->
         <ul class="list-none text-lg flex  sticky top-12 overflow-x-scroll bg-white z-10
         *:text-nowrap

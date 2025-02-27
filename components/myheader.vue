@@ -5,7 +5,7 @@
         <nuxt-link to="/" class="btn btn-ghost text-2xl font-bold">中国兰花博览园</nuxt-link>
       </div>
       <div class="flex-none">
-        <input class="w-24 rounded-full placeholder:text-center placeholder:text-white border bg-blue-400 mr-2" type="search" placeholder="搜索"  name="" id="" @click="clickSearch">
+        <input class="w-24 rounded-full placeholder:text-center placeholder:text-white border border-blue-600 bg-blue-400 mr-2" type="search" placeholder="  搜索"  name="" id="" @click="clickSearch">
         <button class="">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
             class="inline-block h-5 w-5 stroke-current">

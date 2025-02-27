@@ -1,6 +1,6 @@
 <template>
     <UCarousel v-slot="{ item }" ref="carouselRef"
-     :items="items" class="w-full h-56 overflow-hidden   rounded-xl" 
+     :items="items" class="w-full h-56 overflow-hidden  rounded-xl" 
      arrows indicators>
       <img :src="item" class=" object-cover w-screen h-full p-2 rounded-xl" draggable="false">
     </UCarousel>
