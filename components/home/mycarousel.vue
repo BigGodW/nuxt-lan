@@ -1,14 +1,31 @@
 <template>
-    <h1>轮播图</h1>
+    <UCarousel v-slot="{ item }" ref="carouselRef"
+     :items="items" class="w-full h-56 overflow-hidden   rounded-xl" 
+     arrows indicators>
+      <img :src="item" class=" object-cover w-screen h-full p-2 rounded-xl" draggable="false">
+    </UCarousel>
    <div>
     
    </div>
 </template>
 
 <script setup>
+const carouselRef = ref()
 const items = [
 //   'https://img.wubug.cn/%E5%A4%A9%E5%BA%9C%E5%85%B0%E8%B0%B7.jpg',
   'https://img.wubug.cn/%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%88%9B%E4%B8%9A',
-  'https://img.wubug.cn/%E5%9B%BE%E6%80%AA%E5%85%BD_%E6%98%A5%E8%8A%82%E9%98%B2%E7%96%AB%E5%85%AC%E4%BC%97%E5%8F%B7%E9%A6%96%E5%9B%BE%20%282%29.jpg'
+  'https://img.wubug.cn/%E5%A4%A9%E5%BA%9C%E5%85%B0%E8%B0%B7.jpg'
 ]
+
+onMounted(() => {
+  setInterval(() => {
+    if (!carouselRef.value) return
+
+    if (carouselRef.value.page === carouselRef.value.pages) {
+      return carouselRef.value.select(0)
+    }
+
+    carouselRef.value.next()
+  }, 3000)
+})
 </script>

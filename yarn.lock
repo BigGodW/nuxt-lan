@@ -996,7 +996,7 @@
     pkg-types "^1.2.1"
     semver "^7.6.3"
 
-"@nuxtjs/tailwindcss@^6.13.1":
+"@nuxtjs/tailwindcss@6.13.1", "@nuxtjs/tailwindcss@^6.13.1":
   version "6.13.1"
   resolved "https://registry.npmmirror.com/@nuxtjs/tailwindcss/-/tailwindcss-6.13.1.tgz#9c4dfc71c4fcb8382af78c8a4fa63eaba62d4ea9"
   integrity sha512-atL2SaPsxLfMTlXUQvr1UpDYdz6ocNOhH35H+t7M++g4r79QiQScJ7XuyyMR9AyBN19lkPA3nw7NXxazXmYxlA==

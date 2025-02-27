@@ -2,7 +2,7 @@
     <HomeMycarousel></HomeMycarousel>
     <div>
         <HomeLanhuaMenu></HomeLanhuaMenu>
-       <HomeMylist></HomeMylist> 
+        <HomeMylist></HomeMylist> 
     </div>
 </template>
 <script>
