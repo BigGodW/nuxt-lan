@@ -1,5 +1,6 @@
 <template>
-    <div class="flex m-1">
+    <NuxtLink to="/article/1">
+        <div class="flex m-1">
         <div class=" w-36 shrink-0" >
             <img class="rounded-md w-full h-full aspect-video object-cover" src="http://img.wubug.cn/%E5%85%BB%E5%85%B0.jpg" alt="">
         </div>
@@ -14,4 +15,5 @@
             </div>
         </div>
     </div>
+    </NuxtLink>
 </template>
