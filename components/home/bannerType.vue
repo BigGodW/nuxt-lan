@@ -1,22 +1,21 @@
 <template>
     <div>
-        <div class="flex m-1 *:shadow-sm">
-            <div class=" w-24 h-32 text-white
-             bg-gradient-to-b from-indigo-500
-            bg-red-100 flex-none relative rounded-md m-1 p-2""
-            >
-                <h1>在线直播</h1>
-                <p class=" text-[12px]">19:00-23:00</p>
+        <div class="flex m-1 *:shadow-sm *:rounded-md *:m-1">
+            <div class="w-24 flex-none h-36 text-white 
+            bg-gradient-to-b from-indigo-500 relative rounded-md m-1 p-2
+            ">
+                <h1>直播间</h1>
+                <p class="text-[12px]">19:00--23:00</p>
                 <a href="https://live.douyin.com/215450079114"
                     class="border rounded-full px-2 bg-blue-400 text-[14px] text-white absolute bottom-2 right-2 mx-auto">去看直播</a>
             </div>
-            <div class="flex flex-col justify-center overflow-scroll relative bg-blue-100 p-2 m-1 rounded-md">
+            <div class="flex flex-col justify-center overflow-scroll relative bg-blue-100 p-2  ">
                 <h1 class="text-xl m-1">官方社交平台</h1>
                 <p class=" absolute text-2xl text-slate-300 font-bold top-0 right-0">兰花博览园</p>
                 <div class=" flex *:w-20  text-[14px] *:text-center
                 *:flex *:flex-col *:items-center
                 ">
-                    <NuxtLink to="https://v.douyin.com/i5k1aWEw/" >
+                    <NuxtLink to="https://v.douyin.com/i5k1aWEw/">
                         <p>抖音</p>
                         <svg class="icon text-[50px]" aria-hidden="true">
                             <use xlink:href="#icon-douyin-01"></use>
@@ -28,43 +27,24 @@
                             <use xlink:href="#icon-kuaishou"></use>
                         </svg>
                     </NuxtLink>
-                    <div>
-                        <p>微信</p>
+                    <NuxtLink to="https://mp.weixin.qq.com/s/N5KxyF9SJgurfLZ1xi1v1Q">
+                        <p>公众号</p>
                         <svg class="icon text-[50px]" aria-hidden="true">
                             <use xlink:href="#icon-weixin"></use>
                         </svg>
-                    </div>
-                    <div>
-                        <p>小红书</p>
-                        <svg class="icon text-[50px]" aria-hidden="true">
-                            <use xlink:href="#icon-xiaohongshu-01"></use>
-                        </svg>
-                    </div>
-                    <div>
+                    </NuxtLink>
+                    <NuxtLink to="https://weibo.com/u/3191429765">
                         <p>微博</p>
                         <svg class="icon text-[50px]" aria-hidden="true">
                             <use xlink:href="#icon-weibo"></use>
                         </svg>
-                    </div>
+                    </NuxtLink>
                 </div>
             </div>
         </div>
     </div>
 </template>
 <script setup>
-useHead({
-    script: [{ src: "https://at.alicdn.com/t/c/font_4842723_ns7lqycbrtp.js?spm=a313x.manage_type_myprojects.i1.10.1d843a81MqSCwd&file=font_4842723_ns7lqycbrtp.js" }]
-})
-definePageMeta({
-    layout: 'blankpage'
-})
+
+
 </script>
-<style type="text/css">
-.icon {
-    width: 1em;
-    height: 1em;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
-}
-</style>

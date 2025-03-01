@@ -1,13 +1,15 @@
 <template>
-    <HomeMycarousel></HomeMycarousel>
     <div>
-        <HomeBannerType></HomeBannerType>
-        <HomeLanhuaMenu></HomeLanhuaMenu>
-        <HomeMylist></HomeMylist> 
+        <HomeMycarousel></HomeMycarousel>
+        <div>
+            <HomeBannerType></HomeBannerType>
+            <HomeLanhuaMenu></HomeLanhuaMenu>
+            <HomeMylist></HomeMylist>
+        </div>
     </div>
 </template>
 <script>
-import { HomeBannerType } from '#components';
+
 
 
 </script>
