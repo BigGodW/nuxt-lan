@@ -5,13 +5,25 @@
             bg-gradient-to-b from-indigo-500 relative rounded-md m-1 p-2
             ">
                 <h1>直播间</h1>
+
+                <svg class="icon text-[60px] opacity-50 absolute top-14 right-2" aria-hidden="true">
+                    <use xlink:href="#icon-live"></use>
+                </svg>
+
                 <p class="text-[12px]">19:00--23:00</p>
                 <a href="https://live.douyin.com/215450079114"
                     class="border rounded-full px-2 bg-blue-400 text-[14px] text-white absolute bottom-2 right-2 mx-auto">去看直播</a>
             </div>
             <div class="flex flex-col justify-center overflow-scroll relative bg-blue-100 p-2  ">
-                <h1 class="text-xl m-1">官方社交平台</h1>
-                <p class=" absolute text-2xl text-slate-300 font-bold top-0 right-0">兰花博览园</p>
+                <div class="flex items-center">
+                    <h1 class="text-xl m-1">官方社交平台</h1>
+
+                    <svg class="icon text-[30px] text-amber-500" aria-hidden="true">
+                        <use xlink:href="#icon-assessed-badge"></use>
+                    </svg>
+
+                </div>
+                
                 <div class=" flex *:w-20  text-[14px] *:text-center
                 *:flex *:flex-col *:items-center
                 ">
@@ -33,7 +45,7 @@
                             <use xlink:href="#icon-weixin"></use>
                         </svg>
                     </NuxtLink>
-                    <NuxtLink to="https://weibo.com/u/3191429765">
+                    <NuxtLink to="https://m.weibo.cn/u/3191429765">
                         <p>微博</p>
                         <svg class="icon text-[50px]" aria-hidden="true">
                             <use xlink:href="#icon-weibo"></use>

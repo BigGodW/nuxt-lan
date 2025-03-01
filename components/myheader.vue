@@ -2,7 +2,7 @@
     <div class=" bg-white flex shadow-sm fixed z-50 p-2 items-center
          top-0 w-full h-12">
       <div class="flex-1">
-        <nuxt-link to="/" class="btn btn-ghost text-2xl font-bold">中国兰花博览园</nuxt-link>
+        <nuxt-link to="/" style="font-family: '阿里妈妈东方大楷 Regular';" class="btn btn-ghost text-2xl font-bold">中国兰花博览园</nuxt-link>
       </div>
       <div class="flex-none">
         <input class="w-24 rounded-full placeholder:text-center placeholder:text-white border border-blue-600 bg-blue-400 mr-2" type="search" placeholder="  搜索"  name="" id="" @click="clickSearch">

@@ -1,8 +1,8 @@
 <template>
     <div>
-        <HomeMycarousel></HomeMycarousel>
+        <HomeSlideshow></HomeSlideshow>
         <div>
-            <HomeBannerType></HomeBannerType>
+            <HomeBannerType class="md:hidden"></HomeBannerType>
             <HomeLanhuaMenu></HomeLanhuaMenu>
             <HomeMylist></HomeMylist>
         </div>
