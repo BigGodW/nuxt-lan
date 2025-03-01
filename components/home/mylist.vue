@@ -1,14 +1,8 @@
 <template>
     <div class=" grid grid-cols-2 p-1 sm:grid-cols-3 lg:grid-cols-4">
-        <template class=" m-1 md:m-2 shadow  rounded-xl" v-for="i in 10">
-           <NuxtLink :to="'/orchid/'+i">
-            <div class="m-1  " style="aspect-ratio: 1/1;">
-                <img src="https://img.wubug.cn/%E6%A2%85-%E6%96%B9%E5%BD%A2.jpg" alt="" class=" w-full
-                h-full object-cover rounded-xl">
-            </div>
-            <h1 class="text-center">name {{ '《' +i +"》" }}</h1>
-           </NuxtLink>
-            
-        </template>
+            <!-- 兰花展示列表 -->
+            <BaseOrchidItem v-for="i in 6" title="西部荷王" :orchid-id="1"
+                img-src="https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF" ltype="荷瓣" lclass="春剑">
+            </BaseOrchidItem>
     </div>
 </template>

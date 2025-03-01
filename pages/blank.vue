@@ -4,9 +4,5 @@
     <h1 class="hidden lg:block">电脑端</h1>
     <BaseHeader></BaseHeader>
     <HomeSlideshow></HomeSlideshow>
+    
 </template>
-<script setup>
-definePageMeta({
-    layout: 'blankpage'
-})
-</script>
