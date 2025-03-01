@@ -47,7 +47,7 @@
 }
 </style>
 <script setup>
-const classN = ref(['推荐','春兰','春剑','蕙兰','莲瓣兰','夏兰','其他'])
+const classN = ref([])
 const typeS = ref(['推荐','素花','荷瓣','梅瓣','水仙瓣','奇花','其他'])
 const classIndex = ref(0)
 const typeIndex = ref(0)
@@ -57,5 +57,9 @@ const changeClass = (index)=>{
 const changeType = (index)=>{
     typeIndex.value = index
 }
+const {data:myclass} = await useFetch('/api/class/get')
+classN.value = myclass.value.res.map((item)=>{
+    return item.title
+})
 
 </script>

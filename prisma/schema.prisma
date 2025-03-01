@@ -1,0 +1,67 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+
+// 兰花
+model Orchid {
+  id Int @id @default(autoincrement())
+  class Class @relation(fields: [classId],references: [id])
+  classId Int
+  type Type @relation(fields: [typeId],references: [id])
+  typeId Int 
+  name String
+  cover String
+  imgList Img[]
+  description String
+  peculiarity String
+  region String
+  hisory String
+  view Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// 兰花分类 春兰 春剑
+model Class {
+  id Int @id @default(autoincrement())
+  title String
+  orchids Orchid[]
+  description String?
+  img0 String?
+  img1 String?
+  img2 String?
+}
+
+// 兰花类型 素、梅、荷
+model Type {
+  id Int @id @default(autoincrement())
+  title String
+  orchids Orchid[]
+  description String?
+  img0 String?
+  img1 String?
+  img2 String?
+}
+
+// 图片资源
+model Img {
+  id Int @id @default(autoincrement())
+  orchidId Int
+  orchid Orchid @relation(fields: [orchidId],references: [id])
+  url String
+  title String
+  description String
+  createdAt DateTime @default(now())
+}
