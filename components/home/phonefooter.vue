@@ -1,36 +1,38 @@
 <template>
-    <ul class="flex justify-around bg-blue-600 fixed left-0
-       bottom-0 w-full h-10 text-sm font-bold text-white  rounded-xl
-       *:align-middle 
-      ">
-        <li>
-            <NuxtLink to="/" class="flex flex-col items-center">
-                <UIcon name="streamline:bank-solid" class="w-5 h-5" />
-                <span>首页</span>
+    <div class="py-1 ">
+        <div class="flex justify-around">
+            <NuxtLink to="/" class="flex flex-col items-center  "
+            activeClass="text-blue-600 font-black scale-110"
+            >
+                <svg class="icon text-[30px]" aria-hidden="true">
+                    <use xlink:href="#icon-home"></use>
+                </svg>
+                <span class="text-[14px]">首页</span>
             </NuxtLink>
-        </li>
-        <li>
-            <NuxtLink to="/fenlei" class="flex flex-col items-center">
-                <UIcon name="streamline:travel-hotel-spa-spa-flower-lotus-lily" class="w-5 h-5" />
-                <span>分类</span>
+            <NuxtLink to="/blank" class="flex flex-col items-center" activeClass="text-blue-600 font-black scale-110">
+                <svg class="icon text-[30px]" aria-hidden="true">
+                    <use xlink:href="#icon-bihualanhua"></use>
+                </svg>
+                <span class="text-[14px]">兰文化</span>
             </NuxtLink>
-        </li>
-        <li>
-
-            <NuxtLink to="/new" class="flex flex-col items-center">
-                <UIcon name="streamline:annoncement-megaphone" class="w-5 h-5" />
-                <span>新闻</span>
+            <NuxtLink to="/fenlei" class="flex flex-col items-center" activeClass="text-blue-600 font-black scale-110">
+                <svg class="icon text-[30px]" aria-hidden="true">
+                    <use xlink:href="#icon-all-fill"></use>
+                </svg>
+                <span class="text-[14px]">分类</span>
             </NuxtLink>
-
-        </li>
-        <li>
-
-            <NuxtLink to="/about" class="flex flex-col items-center">
-                <UIcon name="streamline:backpack" class="w-5 h-5" />
-                <span>我们</span>
+            <NuxtLink to="/new" class="flex flex-col items-center" activeClass="text-blue-600 font-black scale-110">
+                <svg class="icon text-[30px]" aria-hidden="true">
+                    <use xlink:href="#icon-a-New-outline3"></use>
+                </svg>
+                <span class="text-[14px]">新闻</span>
             </NuxtLink>
-
-        </li>
-    </ul>
-    
+            <NuxtLink to="/about" class="flex flex-col items-center" activeClass="text-blue-600 font-black scale-110">
+                <svg class="icon text-[30px]" aria-hidden="true">
+                    <use xlink:href="#icon-qiye"></use>
+                </svg>
+                <span class="text-[14px]">公司</span>
+            </NuxtLink>
+        </div>
+    </div>
 </template>
