@@ -7,7 +7,7 @@ export const useOrchidClass = defineStore('orchidclass',{
     },
     getters:{
         iOrchidClassList:(state)=>{
-            return state.orchidClassList.map((item)=>{
+            return state.orchidClassList?.map((item)=>{
                 return {
                     id:item.id,
                     title:item.title
