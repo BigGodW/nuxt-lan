@@ -21,14 +21,14 @@ model Orchid {
   classId Int
   type Type @relation(fields: [typeId],references: [id])
   typeId Int 
-  name String
-  cover String
-  imgList Img[]
-  description String
-  peculiarity String
-  region String
-  hisory String
-  view Int
+  name String?
+  cover String?
+  imgList Json?
+  description String?
+  peculiarity String?
+  region String?
+  hisory String?
+  view Int?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
@@ -58,10 +58,9 @@ model Type {
 // 图片资源
 model Img {
   id Int @id @default(autoincrement())
-  orchidId Int
-  orchid Orchid @relation(fields: [orchidId],references: [id])
   url String
-  title String
-  description String
+  title String?
+  key String
+  description String?
   createdAt DateTime @default(now())
 }
