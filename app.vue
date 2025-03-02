@@ -7,12 +7,12 @@
 </template>
 <script setup>
 useHead({
-    script: [{ src: "https://at.alicdn.com/t/c/font_4842723_vn3jqmt2exo.js" }]
+    script: [{ src: "https://at.alicdn.com/t/c/font_4842723_i4qvjf4rpd.js" }]
 
     //at.alicdn.com/t/c/font_4842723_p284edhvg2s.js
 })
+const useOtypes = useOrchidType()
+const useOclass = useOrchidClass()
+useOtypes.getOrchidTypeList()
+useOclass.getOrchidClassList()
 </script>
-<style type="text/css">
-
-
-</style>

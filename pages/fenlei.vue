@@ -5,22 +5,26 @@
         </div>
         <!-- 兰花分类 顶部固定12 -->
         <ul class="list-none text-lg flex  sticky top-12 overflow-x-scroll bg-white z-10
-        *:text-nowrap
-         *:m-2  *:px-2 *:rounded-md">
-            <li class=" font-bold" v-for="(value,index) in classN" :key="index"
-            :class="{'bg-blue-400 text-white': classIndex == index}"
-            @click="changeClass(index)"
-            >{{ value }}</li>
+        *:text-nowrap *:m-2  *:px-2 *:rounded-md">
+            <li class=" font-bold" 
+            :class="{'bg-blue-400 text-white': classIndex == 0}"
+            @click="changeClass(0)"
+            >推荐</li>
+            <li class=" font-bold" v-for="(item) in useOclass.iOrchidClassList" :key="item.id"
+            :class="{'bg-blue-400 text-white': classIndex == item.id}"
+            @click="changeClass(item.id)"
+            >{{ item.title }}</li>
         </ul>
         <div class="">
-
-            <ul class="index-1 w-20 text-right float-left bg-amber-100 sticky top-24
-        *:m-2  *:p-1 
-        ">
-                <li v-for="(value,index) in typeS" :key="index"
-                :class="{'border-l-4 border-blue-400':typeIndex == index}"
-                @click="changeType(index)"
-                >{{ value }}</li>
+            <ul class="index-1 w-20 text-right float-left bg-amber-100 sticky top-24 *:m-2  *:p-1 ">
+                <li  
+                :class="{'border-l-4 border-blue-400':typeIndex == 0}"
+                @click="changeType(0)"
+                >所有</li>
+                <li v-for="(item) in useOtypes.iOrchidTypeList" :key="item.id"
+                :class="{'border-l-4 border-blue-400':typeIndex == item.id}"
+                @click="changeType(item.id)"
+                >{{ item.title }}</li>
             </ul>
             <div class="ml-18">
                 <div class=" grid grid-cols-2">
@@ -47,19 +51,20 @@
 }
 </style>
 <script setup>
-const classN = ref([])
-const typeS = ref(['推荐','素花','荷瓣','梅瓣','水仙瓣','奇花','其他'])
+
 const classIndex = ref(0)
 const typeIndex = ref(0)
 const changeClass = (index)=>{
+    console.log('兰花分类：',index)
     classIndex.value = index
 }
 const changeType = (index)=>{
+    console.log('兰花类型：',index)
     typeIndex.value = index
 }
-const {data:myclass} = await useFetch('/api/class/get')
-classN.value = myclass.value.res.map((item)=>{
-    return item.title
-})
+
+const useOtypes = useOrchidType()
+const useOclass = useOrchidClass()
+
 
 </script>
