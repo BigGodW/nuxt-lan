@@ -7,7 +7,7 @@
 </template>
 <script setup>
 useHead({
-    script: [{ src: "https://at.alicdn.com/t/c/font_4842723_i4qvjf4rpd.js" }]
+    script: [{ src: "https://at.alicdn.com/t/c/font_4842723_w9whaduuft.js" }]
 
     //at.alicdn.com/t/c/font_4842723_p284edhvg2s.js
 })

@@ -73,3 +73,6 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+git 日志
+git log --pretty=format:"%H - %an, %ad: %s" --date=iso
