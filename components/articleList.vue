@@ -12,3 +12,9 @@
         </div>
     </div>
 </template>
+<script setup>
+const useOrchid = useOrchidStore()
+const orchidList = useOrchid.orchidList
+console.log(orchidList)
+
+</script>

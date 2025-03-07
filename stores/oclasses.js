@@ -17,8 +17,8 @@ export const useOrchidClass = defineStore('orchidclass',{
     },
     actions:{
         async getOrchidClassList(){
-            const {data} = await useFetch('/api/orchidclass')
-            this.orchidClassList = data.value.orchidClassList
+            const {data} = await useMyFetch('/api/orchidclasses')
+            this.orchidClassList = data.value.data
         }
     }
 })

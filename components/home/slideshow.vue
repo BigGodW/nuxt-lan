@@ -5,7 +5,7 @@
          <div class="aspect-video lg:w-[640px] ">
             <UCarousel v-slot="{ item }" :items="items" :ui="{ item: 'basis-full' }" class="rounded-lg overflow-hidden"
                arrows indicators>
-               <img :src="item" class="w-full" draggable="false">
+               <img :src="item" class="w-full object-cover" draggable="false">
             </UCarousel>
          </div>
       </div>
@@ -24,11 +24,18 @@
 
 <script setup>
 const carouselRef = ref()
-const items = [
-  //   'https://img.wubug.cn/%E5%A4%A9%E5%BA%9C%E5%85%B0%E8%B0%B7.jpg',
-  'https://img.wubug.cn/%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%88%9B%E4%B8%9A',
-  'https://img.wubug.cn/%E5%A4%A9%E5%BA%9C%E5%85%B0%E8%B0%B7.jpg'
-]
+const items = ref([])
+const useSlide = useSlideStore()
+const slidelist = useSlide.homeSlide.map((item)=>{
+   return {
+      imgurl:'https://server.orchids.com.cn'+item.img.url,
+      title:item.title,
+      href:item.href,
+      id:item.id
+   }
+})
+items.value = slidelist.map(item => item.imgurl)
+
 
 onMounted(() => {
   setInterval(() => {

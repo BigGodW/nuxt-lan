@@ -9,6 +9,9 @@
     </div>
 </template>
 <script>
+// const useSlide = useSlideStore()
+// useSlide.getHomeSlide()
+
 
 
 
